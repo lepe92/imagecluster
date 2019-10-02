@@ -146,7 +146,7 @@ def _image_worker(filename, size):
     # side would be good, but let's hope that an OSError doesn't cover too much
     # ground when reading data from disk :-)
     try:
-        print(filename)
+        #print(filename)
         img = PIL.Image.open(filename).convert('RGB').resize(size, resample=3)
         arr = image.img_to_array(img, dtype=int)
         return filename, arr
